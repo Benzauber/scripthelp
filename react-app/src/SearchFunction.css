@@ -1,0 +1,67 @@
+.container {
+    max-width: 600px; /* Setzt eine maximale Breite für das Container */
+    margin: 0 auto; /* Zentriert das Container horizontal */
+    padding: 20px; /* Fügt Innenabstand hinzu */
+    border: 1px solid #ddd; /* Fügt eine dünne Rahmenlinie hinzu */
+    border-radius: 8px; /* Rundet die Ecken ab */
+    background-color: #f9f9f9; /* Setzt eine Hintergrundfarbe */
+  }
+  
+  h2 {
+    text-align: center; /* Zentriert die Überschrift */
+    margin-bottom: 20px; /* Fügt Abstand unter der Überschrift hinzu */
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column; /* Richtet die Formularelemente untereinander aus */
+    gap: 10px; /* Fügt Abstand zwischen den Eingabefeldern hinzu */
+  }
+  
+  input {
+    width: 100%; /* Setzt die Breite der Eingabefelder auf 100% */
+    padding: 10px; /* Fügt Innenabstand hinzu */
+    border: 1px solid #ccc; /* Setzt eine Rahmenlinie */
+    border-radius: 4px; /* Rundet die Ecken ab */
+    box-sizing: border-box; /* Verhindert, dass Padding und Border die Gesamtbreite verändern */
+  }
+  
+  button {
+    background-color: #007bff; /* Setzt die Hintergrundfarbe des Buttons */
+    color: white; /* Setzt die Textfarbe des Buttons */
+    border: none; /* Entfernt die Rahmenlinie des Buttons */
+    padding: 10px 20px; /* Fügt Innenabstand hinzu */
+    border-radius: 4px; /* Rundet die Ecken ab */
+    cursor: pointer; /* Ändert den Cursor, wenn über den Button gefahren wird */
+    font-size: 16px; /* Setzt die Schriftgröße des Buttons */
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Ändert die Hintergrundfarbe des Buttons beim Hover */
+  }
+  
+  ul {
+    list-style-type: none; /* Entfernt die Aufzählungszeichen */
+    padding: 0; /* Entfernt den Innenabstand der Liste */
+  }
+  
+  li {
+    border-bottom: 1px solid #ddd; /* Fügt eine dünne Trennlinie zwischen den Listenelementen hinzu */
+    padding: 10px 0; /* Fügt Innenabstand hinzu */
+    display: flex; /* Verwendet Flexbox für die Listenelemente */
+    justify-content: space-between; /* Verteilt den Platz zwischen den Elementen */
+    align-items: center; /* Zentriert die Elemente vertikal */
+  }
+  
+  strong {
+    color: #007bff; /* Setzt die Textfarbe für den Funktionsnamen */
+  }
+  
+  .language {
+    color: black;
+    background-color: red;
+    padding: 4px 8px; /* Fügt Innenabstand hinzu */
+    border-radius: 4px; /* Rundet die Ecken ab */
+    font-weight: bold; /* Setzt den Text fett */
+  }
+  

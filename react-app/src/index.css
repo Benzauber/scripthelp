@@ -1,0 +1,36 @@
+body{
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.link {
+    display: flex;           /* Flexbox verwenden */
+    justify-content: center; /* Zentriert den Inhalt horizontal */
+    align-items: center;     /* Zentriert den Inhalt vertikal (falls nötig) */
+    color: black;
+    list-style-type: none;
+    gap: 4px;
+    padding: 0;
+    margin-top: 20px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  }
+  
+  .link li {
+    display: inline; /* Listenelemente nebeneinander anzeigen */
+  }
+  
+  .link a {
+    text-decoration: none;
+    color: inherit;
+    padding: 8px 16px;
+    border-radius: 4px;
+  }
+  
+  .link a:hover {
+    background-color: black;
+    color: white;
+  }
+  
+  .link .active {
+    background-color: black;
+    color: white;
+  }
+  

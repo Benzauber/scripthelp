@@ -1,0 +1,55 @@
+/* AddFunction.css */
+
+.body {
+    max-width: 600px; /* Setzt eine maximale Breite für das Formular */
+    margin: 0 auto; /* Zentriert das Formular horizontal */
+    padding: 20px; /* Fügt Innenabstand hinzu */
+    border: 1px solid #ddd; /* Fügt eine dünne Rahmenlinie hinzu */
+    border-radius: 8px; /* Rundet die Ecken ab */
+    background-color: #f9f9f9; /* Setzt eine Hintergrundfarbe */
+  }
+  
+  h2 {
+    text-align: center; /* Zentriert die Überschrift */
+    margin-bottom: 20px; /* Fügt Abstand unter der Überschrift hinzu */
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column; /* Richtet die Formularelemente untereinander aus */
+  }
+  
+  .inputs {
+    display: flex;
+    flex-direction: column; /* Richtet die Eingabefelder untereinander aus */
+    gap: 10px; /* Fügt Abstand zwischen den Eingabefeldern hinzu */
+  }
+  
+  input, textarea {
+    width: 100%; /* Setzt die Breite der Eingabefelder auf 100% */
+    padding: 10px; /* Fügt Innenabstand hinzu */
+    border: 1px solid #ccc; /* Setzt eine Rahmenlinie */
+    border-radius: 4px; /* Rundet die Ecken ab */
+    box-sizing: border-box; /* Verhindert, dass Padding und Border die Gesamtbreite verändern */
+  }
+  
+  textarea {
+    resize: vertical; /* Erlaubt vertikales Vergrößern der Textarea */
+    min-height: 100px; /* Setzt eine Mindesthöhe für die Textarea */
+  }
+  
+  button {
+    background-color: #007bff; /* Setzt die Hintergrundfarbe des Buttons */
+    color: white; /* Setzt die Textfarbe des Buttons */
+    border: none; /* Entfernt die Rahmenlinie des Buttons */
+    padding: 10px 20px; /* Fügt Innenabstand hinzu */
+    border-radius: 4px; /* Rundet die Ecken ab */
+    cursor: pointer; /* Ändert den Cursor, wenn über den Button gefahren wird */
+    font-size: 16px; /* Setzt die Schriftgröße des Buttons */
+    margin-top: 10px; /* Fügt Abstand über dem Button hinzu */
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Ändert die Hintergrundfarbe des Buttons beim Hover */
+  }
+  

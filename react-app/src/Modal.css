@@ -1,0 +1,63 @@
+/* Modal.css */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 500px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between; /* Platz zwischen den Elementen */
+    align-items: center;
+    margin-bottom: 15px; /* Abstand unter dem Header */
+}
+
+.modal-name {
+    flex: 1;
+    margin-right: 15%;
+    text-align: center; /* Text innerhalb des Elements zentrieren */
+    font-weight: bold; /* Macht den Namen fett */
+    color: #007bff; /* Setzt die Farbe des Namens */
+}
+
+.modal-language {
+    text-align: center;
+    color: black;
+    background-color: red;
+    padding: 4px 8px; /* Fügt Innenabstand hinzu */
+    border-radius: 4px; /* Rundet die Ecken ab */
+    font-weight: bold; /* Setzt den Text fett */
+    display: inline-block; /* Macht das Element nur so groß wie der Text */
+    margin-left: 10px; /* Optional: Abstand nach links für visuelle Klarheit */
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #007bff; /* Optional: Setzt die Hintergrundfarbe des Schließen-Buttons */
+    color: white; /* Setzt die Textfarbe des Schließen-Buttons */
+}
+
+.modal-description {
+    margin-top: 20px; /* Abstand über der Beschreibung */
+}
