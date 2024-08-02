@@ -49,7 +49,6 @@ def search_functions():
 
 @app.route('/api/functions', methods=['POST'])
 def add_function():
-    
     data = request.get_json()
     if 'name' not in data or 'description' not in data or 'language' not in data:
         return jsonify({'error': 'Bad Request', 'message': 'Missing name or description or language'}), 400
@@ -59,7 +58,12 @@ def add_function():
     db.session.commit()
     return jsonify({'message': 'Function added'}), 201
 
+@app.route('/api/functions/<int:id>', methods=['DELETE'])
+def delete_function(id):
+    function = Function.query.get_or_404(id)
+    db.session.delete(function)
+    db.session.commit()
+    return jsonify({'message': 'Function deleted'})
 
 if __name__ == '__main__':
     app.run(debug=True)
-    
