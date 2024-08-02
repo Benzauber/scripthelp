@@ -10,6 +10,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .modal-content {
@@ -45,7 +46,6 @@
     border-radius: 4px; /* Rundet die Ecken ab */
     font-weight: bold; /* Setzt den Text fett */
     display: inline-block; /* Macht das Element nur so groß wie der Text */
-    margin-left: 10px; /* Optional: Abstand nach links für visuelle Klarheit */
 }
 
 .modal-close {
@@ -59,5 +59,29 @@
 }
 
 .modal-description {
-    margin-top: 20px; /* Abstand über der Beschreibung */
+    margin-top: 10px; /* Abstand über der Beschreibung */
 }
+.modal-delete {
+    margin-top: 10px;
+    width: 50px;
+    background-color: red;
+    color: black;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end; /* Positionierung am unteren Rand, rechtsbündig */
+    margin-right: -10px;
+}
+
+  .modal-delete:hover {
+    background-color: darkred;
+  }
+  @media (max-width: 767px) {
+    .modal-content {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+  }

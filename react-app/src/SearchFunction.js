@@ -24,26 +24,36 @@ function SearchFunction() {
   }, [searchQuery, searchLanguage]);
 
   useEffect(() => {
-    const fetchFunctions = async () => {
-      try {
-        const response = await axios.get('http://localhost:5000/api/functions/search', {
-          params: { query: debouncedQuery, language: debouncedLanguage }
-        });
-        setFunctions(response.data);
-      } catch (error) {
-        console.error('Error searching functions:', error);
-      }
-    };
-
     fetchFunctions();
   }, [debouncedQuery, debouncedLanguage]);
 
-  const handleNameClick = (name, language, description) => {
-    setSelectedFunction({ name, language, description });
+  const fetchFunctions = async () => {
+    try {
+      const response = await axios.get('http://localhost:5000/api/functions/search', {
+        params: { query: debouncedQuery, language: debouncedLanguage }
+      });
+      setFunctions(response.data);
+    } catch (error) {
+      console.error('Error searching functions:', error);
+    }
+  };
+
+  const handleNameClick = (id, name, language, description) => {
+    setSelectedFunction({ id, name, language, description });
   };
 
   const handleCloseModal = () => {
     setSelectedFunction(null);
+  };
+
+  const handleDeleteFunction = async () => {
+    try {
+      await axios.delete(`http://localhost:5000/api/functions/${selectedFunction.id}`);
+      setFunctions(functions.filter(func => func.id !== selectedFunction.id));
+      handleCloseModal();
+    } catch (error) {
+      console.error('Error deleting function:', error);
+    }
   };
 
   return (
@@ -65,7 +75,7 @@ function SearchFunction() {
       </form>
       <ul>
         {functions.map((func) => (
-          <li key={func.id} onClick={() => handleNameClick(func.name, func.language, func.description)}>
+          <li key={func.id} onClick={() => handleNameClick(func.id, func.name, func.language, func.description)}>
             <strong>
               {func.name}
             </strong>
@@ -77,6 +87,7 @@ function SearchFunction() {
         <Modal
           isOpen={!!selectedFunction}
           onClose={handleCloseModal}
+          onDelete={handleDeleteFunction}
           name={selectedFunction.name}
           language={selectedFunction.language}
           description={selectedFunction.description}
