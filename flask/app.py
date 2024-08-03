@@ -65,5 +65,9 @@ def delete_function(id):
     db.session.commit()
     return jsonify({'message': 'Function deleted'})
 
+@app.route('/test')
+def test():
+    return 'Server is running'
+
 if __name__ == '__main__':
     app.run(debug=True)
